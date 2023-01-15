@@ -12,7 +12,7 @@ ROEY_UNI_CLIENT = CLIENT_.iloc[1]
 CLIENT = ROEY_UNI_CLIENT
 
 
-def getPlaylistData(plalist_id):
+def getPlaylistData(plalist_id, genre):
     from spotipy.oauth2 import SpotifyClientCredentials
     spotify = spotipy.Spotify()
     client_credentials_manager = SpotifyClientCredentials(client_id=CLIENT[0], client_secret=CLIENT[1])
@@ -26,4 +26,5 @@ def getPlaylistData(plalist_id):
         ids.append(songs[i]["track"]["id"])
     features = spotify.audio_features(ids)
     df = pd.DataFrame(features)
-    print(df)
+    df.insert(loc=len(df.columns), column=genre, value="1")
+    print(df.to_string())

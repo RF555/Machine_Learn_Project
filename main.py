@@ -15,7 +15,7 @@ HIP_HOP_MIX = "37i9dQZF1EQnqst5TRi17F"
 COUNTRY_MIX = "37i9dQZF1EQmPV0vrce2QZ"
 
 if __name__ == '__main__':
-    getPlaylistData(ROCK_MIX)
+    getPlaylistData(ROCK_MIX,"rock")
     # CLIENT = pd.read_csv("Spotify Clients.csv")
     # CLIENT_ID = CLIENT.iloc[0][0]  # CLIENT ID
     # CLIENT_SECRET = CLIENT.iloc[0][1] # CLIENT SECRET
