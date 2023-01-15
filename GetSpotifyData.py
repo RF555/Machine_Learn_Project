@@ -6,13 +6,15 @@ and well be using spotipy doc dound in https://spotipy.readthedocs.io/en/2.22.0/
 import pandas as pd
 import spotipy
 
+CLIENT = pd.read_csv("Spotify Clients.csv")
+CLIENT_ID = CLIENT.iloc[0][0]  # CLIENT ID
+CLIENT_SECRET = CLIENT.iloc[0][1]  # CLIENT SECRET
 
-def getPlaylistData(plalist_id="78JTO1LbTGeD4kF8ACBQsC"):
+
+def getPlaylistData(plalist_id):
     from spotipy.oauth2 import SpotifyClientCredentials
     spotify = spotipy.Spotify()
-    cid = "bfac9b315dac4c499fd2fe150e6d5697"  # CLIENT ID
-    secret = "fc3d2ba5d1264f0db507c8ac49ebcc7c"  # CLIENT SECRET
-    client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secret=secret)
+    client_credentials_manager = SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
     spotify = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
     spotify.trace = False
     playlist = spotify.playlist(plalist_id)
