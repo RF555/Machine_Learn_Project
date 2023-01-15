@@ -19,7 +19,6 @@ def getPlaylistData(plalist_id, genre):
     spotify = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
     spotify.trace = False
     playlist = spotify.playlist(plalist_id)
-    # playlist = spotify.user_playlist("roey.feingold", "Roey")
     songs = playlist["tracks"]["items"]
     ids = []
     for i in range(len(songs)):
