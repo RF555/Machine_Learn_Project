@@ -27,11 +27,12 @@ def getPlaylist(plalist_id: str):
     return ids
 
 
-def getPlaylistAudioFeatures(ids, genre: str):
+def getPlaylistAudioFeatures(ids):  # , genre: str):
     features = SPOTIFY.audio_features(ids)
     df = pd.DataFrame(features)
-    df.insert(loc=len(df.columns), column=genre, value="1")
-    print(df.to_string())
+    # df.insert(loc=len(df.columns), column=genre, value="1")
+    # print(df.to_string())
+    return df
 
 # def getPlaylistData(plalist_id: str, genre: str):
 #     client_credentials_manager = SpotifyClientCredentials(client_id=CLIENT[0], client_secret=CLIENT[1])

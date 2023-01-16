@@ -1,7 +1,5 @@
-import json
-
 from GetSpotifyData import *
-import pandas as pd
+from Songs import *
 
 Roey_playlist = "78JTO1LbTGeD4kF8ACBQsC"
 Passenger_playlist = "74xMzIlaOD7cIIOL4wW4Bq"
@@ -17,10 +15,9 @@ HIP_HOP_MIX = "37i9dQZF1EQnqst5TRi17F"
 COUNTRY_MIX = "37i9dQZF1EQmPV0vrce2QZ"
 
 if __name__ == '__main__':
-    # getPlaylistData(ROCK_MIX,"rock")
     # ids=getPlaylist(ROCK_MIX)
-    # getPlaylistAudioFeatures(ids,"rock")
-
-    analysis_dict = SPOTIFY.audio_analysis("0PNt5WTw092eED0ru9SuIp")
-    with open("0PNt5WTw092eED0ru9SuIp.json", "w") as outfile:
-        json.dump(analysis_dict, outfile)
+    # getPlaylistAudioFeatures(ids)
+    songs = Songs()
+    songs.add_playlist(ROCK_MIX, "ROCK")
+    songs.add_playlist(FOLK_ACUSTIC_MIX, "FOLK_ACUSTIC")
+    print(songs)
