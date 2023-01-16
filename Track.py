@@ -3,6 +3,12 @@ from GetSpotifyData import SPOTIFY
 
 class Track:
     _audio_analysis = None
+    ROCK = 0
+    FOLX_ACUSTIC = 0
+    POP = 0
+    METAL = 0
+    HIP_HOP = 0
+    COUNTRY = 0
 
     def __int__(self, audio_features: dict, genre: str):
         self._id = audio_features.get("id")
