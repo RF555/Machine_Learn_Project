@@ -1,3 +1,5 @@
+import json
+
 from GetSpotifyData import *
 import pandas as pd
 
@@ -15,9 +17,10 @@ HIP_HOP_MIX = "37i9dQZF1EQnqst5TRi17F"
 COUNTRY_MIX = "37i9dQZF1EQmPV0vrce2QZ"
 
 if __name__ == '__main__':
-    getPlaylistData(ROCK_MIX,"rock")
-    # CLIENT = pd.read_csv("Spotify Clients.csv")
-    # CLIENT_ID = CLIENT.iloc[0][0]  # CLIENT ID
-    # CLIENT_SECRET = CLIENT.iloc[0][1] # CLIENT SECRET
-    # print(CLIENT_ID)
-    # print(CLIENT_SECRET)
+    # getPlaylistData(ROCK_MIX,"rock")
+    # ids=getPlaylist(ROCK_MIX)
+    # getPlaylistAudioFeatures(ids,"rock")
+
+    analysis_dict = SPOTIFY.audio_analysis("0PNt5WTw092eED0ru9SuIp")
+    with open("0PNt5WTw092eED0ru9SuIp.json", "w") as outfile:
+        json.dump(analysis_dict, outfile)
