@@ -14,10 +14,11 @@ class Songs:
             if t.get("id") in self._songs:
                 self._songs.get(t.get("id")).update_genre(genre)
             else:
-                track = Track(t,genre)
+                track = Track(t, genre)
                 self._songs.update({track.id: track})
+
     def __str__(self):
-        st=""
+        st = ""
         for t in self._songs.values():
-            st+=str(t)+"\n"
+            st += str(t) + "\n"
         return st
