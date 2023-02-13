@@ -1,7 +1,7 @@
 """
 We used the code found in https://opendatascience.com/a-machine-learning-deep-dive-into-my-spotify-data/
 
-We'll be using spotipy doc dound in https://spotipy.readthedocs.io/en/2.22.0/
+We'll be using spotipy doc found in https://spotipy.readthedocs.io/en/2.22.0/
 """
 
 import pandas as pd
