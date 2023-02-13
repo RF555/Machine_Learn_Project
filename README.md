@@ -17,20 +17,54 @@ We collected our data from the following generic Spotify playlist:
 * [Country Mix](https://open.spotify.com/playlist/37i9dQZF1EQmPV0vrce2QZ)
 
 ### Parameters
+
 Each song has the following parameters:
 
+* `id`
+* `genre` - 1/0 for each genre from the playlists above.
+* `_danceability`
+* `_energy`
+* `_key`
+* `_loudness`
+* `_mode`
+* `_speechiness`
+* `_acousticness`
+* `_instrumentalness`
+* `_liveness`
+* `_valence`
+* `_tempo`
+* `_duration_ms`
+* `_time_signature`
 
+All but `id` and `genre` are represented by a numeric value.
 
+## Mechine Learning Algorithms
 
+* Adaboost
+* K Nearest Neighbors
+* SVM
+* Decision Tree
 
+## Our Main Questions
 
+___
+
+#### 1. Given this Data Base, could we successfully (with good probability) classify a song to one of these genres?
+
+#### 2. Does one of the algorithms we used worked better than the others? If so why?
+
+#### 3. Which of the parameters of the songs have the most effect of the classification?
+
+#### 4. Can we make a comparison of algorithms by there accuracy?
+
+#### 5. Can we add more parameters so that we'll get better results?
 
 ## Authors
 
 ___
 Roey Feingold https://github.com/RF555
 
-Yohai `????` https://github.com/yoyo150696
+Yohai Hadad https://github.com/yoyo150696
 
 ### Credits
 
