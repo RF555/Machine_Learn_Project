@@ -16,6 +16,15 @@ We collected our data from the following generic Spotify playlist:
 * [Hip Hop Mix](https://open.spotify.com/playlist/37i9dQZF1EQnqst5TRi17F)
 * [Country Mix](https://open.spotify.com/playlist/37i9dQZF1EQmPV0vrce2QZ)
 
+### Parameters
+Each song has the following parameters:
+
+
+
+
+
+
+
 ## Authors
 
 ___

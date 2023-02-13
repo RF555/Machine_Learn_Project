@@ -3,7 +3,7 @@ from GetSpotifyData import *
 from Track import *
 
 
-class Songs:
+class SongList:
     def __init__(self):
         self._songs = {}
 
