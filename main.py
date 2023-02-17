@@ -1,4 +1,3 @@
-import ReadHaberman
 from GetSpotifyData import *
 from SongList import *
 from ML_algos import *
@@ -21,7 +20,10 @@ if __name__ == '__main__':
     songs = SongList()
     songs.add_playlist(ROCK_MIX, "ROCK")
     songs.add_playlist(FOLK_ACUSTIC_MIX, "FOLK_ACUSTIC")
-    print(songs)
+    songs.add_playlist(POP_MIX, "POP")
+    songs.add_playlist(METAL_MIX, "METAL")
+    songs.add_playlist(HIP_HOP_MIX, "HIP_HOP")
+    songs.add_playlist(COUNTRY_MIX, "COUNTRY")
     songs.csv.close()
     algos = ML_algos("spo.csv")
-    algos.adaboost()
+    algos.dt_algo()

@@ -30,20 +30,4 @@ def getPlaylist(plalist_id: str):
 def getPlaylistAudioFeatures(ids):  # , genre: str):
     features = SPOTIFY.audio_features(ids)
     df = pd.DataFrame(features)
-    # df.insert(loc=len(df.columns), column=genre, value="1")
-    # print(df.to_string())
     return df
-
-# def getPlaylistData(plalist_id: str, genre: str):
-#     client_credentials_manager = SpotifyClientCredentials(client_id=CLIENT[0], client_secret=CLIENT[1])
-#     spotify = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-#     spotify.trace = False
-#     playlist = spotify.playlist(plalist_id)
-#     songs = playlist["tracks"]["items"]
-#     ids = []
-#     for i in range(len(songs)):
-#         ids.append(songs[i]["track"]["id"])
-#     features = spotify.audio_features(ids)
-#     df = pd.DataFrame(features)
-#     df.insert(loc=len(df.columns), column=genre, value="1")
-#     print(df.to_string())
