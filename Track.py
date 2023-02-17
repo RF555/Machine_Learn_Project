@@ -71,12 +71,12 @@ class Track:
     def __str__(self):
         return str("details of id: " + self.id + "\n\t\tGenere: ROCK=" + str(self.ROCK) + ", FOLK_ACUSTIC=" + str(
             self.FOLK_ACUSTIC) + ", " "POP=" + str(self.POP) + ", METAL=" + str(self.METAL) + ", HIP_HOP=" + str(
-            self.HIP_HOP) + ", COUNTRY=" + str(self.COUNTRY) + "\n\t\t_danceability: " + str(
-            self.danceability) + ",\n\t\t_energy: " + str(self.energy) + ",\n\t\t_key: " + str(
-            self.key) + ",\n\t\t_loudness: " + str(self.loudness) + ",\n\t\t_mode: " + str(
-            self.mode) + ",\n\t\t_speechiness: " + str(self.speechiness) + ",\n\t\t_acousticness: " + str(
-            self.acousticness) + ",\n\t\t_instrumentalness: " + str(
-            self.instrumentalness) + ",\n\t\t_liveness: " + str(self.liveness) + ",\n\t\t_valence: " + str(
-            self.valence) + ",\n\t\t_tempo: " + str(self.tempo) + ",\n\t\t_duration_ms: " + str(
-            self.duration_ms) + ",\n\t\t_time_signature: " + str(self.time_signature) + "\n\n")
+            self.HIP_HOP) + ", COUNTRY=" + str(self.COUNTRY) + "\n\t\tdanceability: " + str(
+            self.danceability) + ",\n\t\tenergy: " + str(self.energy) + ",\n\t\tkey: " + str(
+            self.key) + ",\n\t\tloudness: " + str(self.loudness) + ",\n\t\tmode: " + str(
+            self.mode) + ",\n\t\tspeechiness: " + str(self.speechiness) + ",\n\t\tacousticness: " + str(
+            self.acousticness) + ",\n\t\tinstrumentalness: " + str(
+            self.instrumentalness) + ",\n\t\tliveness: " + str(self.liveness) + ",\n\t\tvalence: " + str(
+            self.valence) + ",\n\t\ttempo: " + str(self.tempo) + ",\n\t\tduration_ms: " + str(
+            self.duration_ms) + ",\n\t\ttime_signature: " + str(self.time_signature) + "\n\n")
 

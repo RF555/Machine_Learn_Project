@@ -4,11 +4,11 @@ from Track import *
 import csv
 
 
-class Songs:
+class SongList:
     def __init__(self):
         self.csv = open('spo.csv', 'w', encoding='UTF8', newline='')
-        self.header = ['danceability', 'energy', 'key', 'loudness', 'speechiness', 'acousticness', 'instrumentalness'
-            , 'liveness', 'tempo', 'genre']
+        self.header = ['id','danceability', 'energy', 'key', 'loudness', 'speechiness', 'acousticness', 'instrumentalness'
+            , 'liveness', 'tempo','duration_ms', 'genre']
         self.writer = csv.writer(self.csv)
         self.writer.writerow(self.header)
         self._songs = {}

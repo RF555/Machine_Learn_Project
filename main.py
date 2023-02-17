@@ -1,6 +1,6 @@
 import ReadHaberman
 from GetSpotifyData import *
-from Songs import *
+from SongList import *
 from ML_algos import *
 Roey_playlist = "78JTO1LbTGeD4kF8ACBQsC"
 Passenger_playlist = "74xMzIlaOD7cIIOL4wW4Bq"
@@ -18,7 +18,7 @@ COUNTRY_MIX = "37i9dQZF1EQmPV0vrce2QZ"
 if __name__ == '__main__':
     ids=getPlaylist(ROCK_MIX)
     getPlaylistAudioFeatures(ids)
-    songs = Songs()
+    songs = SongList()
     songs.add_playlist(ROCK_MIX, "ROCK")
     songs.add_playlist(FOLK_ACUSTIC_MIX, "FOLK_ACUSTIC")
     print(songs)
