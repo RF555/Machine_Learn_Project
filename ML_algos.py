@@ -78,7 +78,6 @@ class ML_algos:
         Decision Tree Algorithm
         """
         clf = DecisionTreeClassifier(random_state=0, max_depth=5)
-        # clf = DecisionTreeClassifier(random_state=0)
 
         clf.fit(self.X_train, self.y_train)
 
