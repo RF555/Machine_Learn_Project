@@ -40,8 +40,8 @@ class ML_algos:
             test.append(test_score)
             scores[k] = [training_score, test_score]
 
-            for keys, values in scores.items():
-                print(keys, ':', values)
+        for keys, values in scores.items():
+            print(keys, ':', values)
 
         plt.scatter(K, training, color='k')
         plt.scatter(K, test, color='g')
