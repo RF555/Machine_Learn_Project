@@ -45,8 +45,24 @@ class ML_algos:
             test.append(test_score)
             scores[k] = [training_score, test_score]
 
+        min_diff_k = -1
+        min_diff = [0, 1]
+        max_test_k = -1
+        max_test = [0, 0]
         for keys, values in scores.items():
             print(keys, ':', values)
+            if abs(min_diff[0] - min_diff[1]) > abs(values[0] - values[1]):
+                min_diff_k = keys
+                min_diff[0] = values[0]
+                min_diff[1] = values[1]
+            if max_test[1] < values[1]:
+                max_test_k = keys
+                max_test[0] = values[0]
+                max_test[1] = values[1]
+        print()
+        print("Minimum Difference: k = ", min_diff_k, ":", min_diff, "\n\t\tDifference: ",
+              abs(min_diff[0] - min_diff[1]))
+        print("Maximum Test Accuracy: k = ", max_test_k, ":", max_test)
 
         plt.scatter(K, training, color='k')
         plt.scatter(K, test, color='g')
