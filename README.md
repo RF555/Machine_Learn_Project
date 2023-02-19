@@ -53,6 +53,8 @@ ___
 
 #### 2. Does one of the algorithms we used worked better than the others? If so why?
 
+The 2 algoritms that wored best were the Decision Tree and SVM (dropping the duration_ms property).
+
 #### 3. Which of the parameters of the songs can be dropped to get better classification?
 
 ##### Decision Tree
@@ -91,6 +93,15 @@ ___
 | 8                    | 0.46666  |                | X        |       |            |        | X             |                |                    |            |           |         | X             |
 
 #### 4. Can we make a comparison of algorithms by there accuracy?
+
+Our comparison will be of the best result of each algorithm:
+
+| Algo                | Best Accuracy | Dropping                                        |
+|---------------------|---------------|-------------------------------------------------|
+| Decision Tree       | 0.67777       | `key`, `loudness`, `liveness` and `duration_ms` |
+| SVM                 | 0.6           | `duration_ms`                                   |
+| K Nearest Neighbors | 0.5           | `key`, `tempo` and `duration_ms`                |
+| Adaboost            | 0.46666       | `energy`, `speechiness` and `duration_ms`       |
 
 #### 5. Can we add more parameters so that we'll get better results?
 
