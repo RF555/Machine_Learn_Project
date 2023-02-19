@@ -7,8 +7,18 @@ import csv
 class SongList:
     def __init__(self):
         self.csv = open('spo.csv', 'w', encoding='UTF8', newline='')
-        self.header = ['danceability', 'energy', 'key', 'loudness', 'speechiness', 'acousticness', 'instrumentalness'
-            , 'liveness', 'tempo','duration_ms', 'genre']
+        self.header = []
+        self.header.append('danceability')
+        self.header.append('energy')
+        self.header.append('key')
+        self.header.append('loudness')
+        self.header.append('speechiness')
+        self.header.append('acousticness')
+        self.header.append('instrumentalness')
+        self.header.append('liveness')
+        self.header.append('tempo')
+        self.header.append('duration_ms')
+        self.header.append('genre')
         self.writer = csv.writer(self.csv)
         self.writer.writerow(self.header)
         self._songs = {}
@@ -27,7 +37,6 @@ class SongList:
                 for val in self.header:
                     data.append(getattr(track, val))
                 self.writer.writerow(data)
-
 
     def __str__(self):
         st = ""
