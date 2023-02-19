@@ -40,10 +40,13 @@ All but `id` and `genre` are represented by a numeric value.
 
 ## Mechine Learning Algorithms
 
-* Adaboost
-* K Nearest Neighbors
-* SVM
-* Decision Tree
+### Adaboost
+
+### K Nearest Neighbors
+
+### SVM
+
+### Decision Tree
 
 ## Our Main Questions
 
@@ -53,13 +56,48 @@ ___
 
 #### 2. Does one of the algorithms we used worked better than the others? If so why?
 
-#### 3. Which of the parameters of the songs have the most effect of the classification?
+#### 3. Which of the parameters of the songs can be dropped to get better classification?
+
+##### Decision Tree
+
+| Number of Properties               | Accuracy | `danceability` | `energy` | `key` | `loudness` | `mode` | `speechiness` | `acousticness` | `instrumentalness` | `liveness` | `valence` | `tempo` | `duration_ms` |
+|------------------------------------|----------|----------------|----------|-------|------------|--------|---------------|----------------|--------------------|------------|-----------|---------|---------------|
+| 11                                 | 0.63333  |                |          |       |            |        |               |                |                    |            |           |         |               |
+| 10<br/>(all marked X are the same) | 0.65555  |                |          |       | X          |        |               |                | X                  |            |           | X       |               |
+| 9                                  | 0.67777  |                |          |       | X          |        |               |                |                    |            |           |         | X             |
+| 8                                  | 0.67777  |                |          | X     | X          |        |               |                |                    |            |           |         | X             |
+| 7                                  | 0.67777  |                |          | X     | X          |        |               |                |                    | X          |           |         | X             |
+
+##### K Nearest Neighbors
+
+| Number of Properties               | Accuracy | `danceability` | `energy` | `key` | `loudness` | `mode` | `speechiness` | `acousticness` | `instrumentalness` | `liveness` | `valence` | `tempo` | `duration_ms` |
+|------------------------------------|----------|----------------|----------|-------|------------|--------|---------------|----------------|--------------------|------------|-----------|---------|---------------|
+| 11                                 | 0.3333   |                |          |       |            |        |               |                |                    |            |           |         |               |
+| 10<br/>(all marked X are the same) | 0.3333   | X              | X        | X     | X          | X      | X             | X              | X                  | X          | X         | X       | X             |
+| 9                                  | 0.3555   |                |          | X     |            |        |               |                |                    |            |           |         | X             |
+| 8                                  | 0.5      |                |          | X     |            |        |               |                |                    |            |           | X       | X             |
+
+##### SVM
+
+| Number of Properties | Accuracy | `danceability` | `energy` | `key` | `loudness` | `mode` | `speechiness` | `acousticness` | `instrumentalness` | `liveness` | `valence` | `tempo` | `duration_ms` |
+|----------------------|----------|----------------|----------|-------|------------|--------|---------------|----------------|--------------------|------------|-----------|---------|---------------|
+| 11                   | 0.21111  |                |          |       |            |        |               |                |                    |            |           |         |               |
+| 10                   | 0.6      |                |          |       |            |        |               |                |                    |            |           |         | X             |
+
+##### Adaboost
+
+| Number of Properties | Accuracy | `danceability` | `energy` | `key` | `loudness` | `mode` | `speechiness` | `acousticness` | `instrumentalness` | `liveness` | `valence` | `tempo` | `duration_ms` |
+|----------------------|----------|----------------|----------|-------|------------|--------|---------------|----------------|--------------------|------------|-----------|---------|---------------|
+| 11                   | 0.43333  |                |          |       |            |        |               |                |                    |            |           |         |               |
+| 10                   | 0.46666  |                |          |       |            |        | X             |                |                    |            |           |         |               |
+| 9                    | 0.46666  |                | X        |       |            |        | X             |                |                    |            |           |         |               |
+| 8                    | 0.46666  |                | X        |       |            |        | X             |                |                    |            |           |         | X             |
 
 #### 4. Can we make a comparison of algorithms by there accuracy?
 
 #### 5. Can we add more parameters so that we'll get better results?
 
-#### 6. 
+#### 6.
 
 ## Authors
 
