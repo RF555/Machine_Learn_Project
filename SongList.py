@@ -16,6 +16,7 @@ class SongList:
         self.header.append('acousticness')
         self.header.append('instrumentalness')
         self.header.append('liveness')
+        self.header.append('valence')
         self.header.append('tempo')
         self.header.append('duration_ms')
         self.header.append('genre')
