@@ -40,13 +40,10 @@ All but `id` and `genre` are represented by a numeric value.
 
 ## Mechine Learning Algorithms
 
-### Adaboost
-
-### K Nearest Neighbors
-
-### SVM
-
-### Decision Tree
+* Adaboost
+* K Nearest Neighbors
+* SVM
+* Decision Tree
 
 ## Our Main Questions
 
