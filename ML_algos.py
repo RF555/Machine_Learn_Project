@@ -14,10 +14,15 @@ knn_model = KNeighborsRegressor(n_neighbors=3)
 
 
 class ML_algos:
-    def __init__(self, ls):
+    """
+    ls: csv file path.
+    header_size: number of properties for each track.
+    """
+
+    def __init__(self, ls, header_size):
         songs_csv = pd.read_csv(ls)
-        x = songs_csv.iloc[:, 0:10]
-        y = songs_csv.iloc[:, 10]
+        x = songs_csv.iloc[:, 0:header_size - 1]
+        y = songs_csv.iloc[:, header_size - 1]
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
             x, y, test_size=0.3, random_state=0)
 
@@ -48,25 +53,26 @@ class ML_algos:
         plt.show()
 
     def dt_algo(self):
+        clf = DecisionTreeClassifier(random_state=0, max_depth=5)
+        # clf = DecisionTreeClassifier(random_state=0)
 
-        clf = DecisionTreeClassifier()
+        clf.fit(self.X_train, self.y_train)
 
-        clf = clf.fit(self.X_train, self.y_train)
-
-        y_pred = clf.predict(self.X_test)
-
-        print("Accuracy:", metrics.accuracy_score(self.y_test, y_pred))
+        print("Test Accuracy:", clf.score(self.X_test, self.y_test))
+        print("Trainning Accuracy:", clf.score(self.X_train, self.y_train))
 
     def svm_algo(self):
         clf = svm.SVC(kernel='linear')
         clf.fit(self.X_train, self.y_train)
-        y_pred = clf.predict(self.X_test)
-        print("Accuracy:", metrics.accuracy_score(self.y_test, y_pred))
+
+        print("Test Accuracy:", clf.score(self.X_test, self.y_test))
+        print("Trainning Accuracy:", clf.score(self.X_train, self.y_train))
 
     def adaboost(self):
 
-        abc = AdaBoostClassifier(n_estimators=50,
+        clf = AdaBoostClassifier(n_estimators=50,
                                  learning_rate=1)
-        model = abc.fit(self.X_train, self.y_train)
-        y_pred = model.predict(self.X_test)
-        print("Accuracy:", metrics.accuracy_score(self.y_test, y_pred))
+        model = clf.fit(self.X_train, self.y_train)
+
+        print("Test Accuracy:", clf.score(self.X_test, self.y_test))
+        print("Trainning Accuracy:", clf.score(self.X_train, self.y_train))
