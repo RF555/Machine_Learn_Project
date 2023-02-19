@@ -61,8 +61,11 @@ class ML_algos:
                 max_test_k = keys
                 max_test[0] = values[0]
                 max_test[1] = values[1]
+        if min_diff[1] >= max_test[1]:
+            max_test_k = min_diff_k
+            max_test = min_diff
         print()
-        print("Minimum Difference: k = ", min_diff_k, ":", min_diff, "\n\t\tDifference: ",
+        print("Minimum Difference:    k = ", min_diff_k, ":", min_diff, "\n\t\tDifference: ",
               abs(min_diff[0] - min_diff[1]))
         print("Maximum Test Accuracy: k = ", max_test_k, ":", max_test)
 
