@@ -49,13 +49,13 @@ All but `id` and `genre` are represented by a numeric value.
 
 ___
 
-#### 1. Given this Data Base, could we successfully (with good probability) classify a song to one of these genres?
+### 1. Given this Data Base, could we successfully (with good probability) classify a song to one of these genres?
 
-#### 2. Does one of the algorithms we used worked better than the others? If so why?
+### 2. Does one of the algorithms we used worked better than the others? If so why?
 
 The 2 algoritms that wored best were the Decision Tree and SVM (dropping the duration_ms property).
 
-#### 3. Which of the parameters of the songs can be dropped to get better classification?
+### 3. Which of the parameters of the songs can be dropped to get better classification?
 
 ##### Decision Tree
 
@@ -67,7 +67,7 @@ The 2 algoritms that wored best were the Decision Tree and SVM (dropping the dur
 | 8                                  | 0.67777  |                |          | X     | X          |        |               |                |                    |            |           |         | X             |
 | 7                                  | 0.67777  |                |          | X     | X          |        |               |                |                    | X          |           |         | X             |
 
-##### K Nearest Neighbors
+#### K Nearest Neighbors
 
 | Number of Properties               | Accuracy | `danceability` | `energy` | `key` | `loudness` | `mode` | `speechiness` | `acousticness` | `instrumentalness` | `liveness` | `valence` | `tempo` | `duration_ms` |
 |------------------------------------|----------|----------------|----------|-------|------------|--------|---------------|----------------|--------------------|------------|-----------|---------|---------------|
@@ -92,7 +92,7 @@ The 2 algoritms that wored best were the Decision Tree and SVM (dropping the dur
 | 9                    | 0.46666  |                | X        |       |            |        | X             |                |                    |            |           |         |               |
 | 8                    | 0.46666  |                | X        |       |            |        | X             |                |                    |            |           |         | X             |
 
-#### 4. Can we make a comparison of algorithms by there accuracy?
+### 4. Can we make a comparison of algorithms by there accuracy?
 
 Our comparison will be of the best result of each algorithm:
 
@@ -103,9 +103,9 @@ Our comparison will be of the best result of each algorithm:
 | K Nearest Neighbors | 0.5           | `key`, `tempo` and `duration_ms`                |
 | Adaboost            | 0.46666       | `energy`, `speechiness` and `duration_ms`       |
 
-#### 5. Can we add more parameters so that we'll get better results?
+### 5. Can we add more parameters so that we'll get better results?
 
-#### 6.
+### 6.
 
 ## Authors
 
