@@ -14,12 +14,12 @@ knn_model = KNeighborsRegressor(n_neighbors=3)
 
 
 class ML_algos:
-    """
-    ls: csv file path.
-    header_size: number of properties for each track.
-    """
 
     def __init__(self, ls, header_size):
+        """
+        ls: csv file path.
+        header_size: number of properties for each track.
+        """
         songs_csv = pd.read_csv(ls)
         x = songs_csv.iloc[:, 0:header_size - 1]
         y = songs_csv.iloc[:, header_size - 1]
@@ -27,7 +27,9 @@ class ML_algos:
             x, y, test_size=0.3, random_state=0)
 
     def knn_algo(self):
-
+        """
+        K Nearest Neighbors Algorithm
+        """
         K = []
         training = []
         test = []
@@ -69,6 +71,9 @@ class ML_algos:
         plt.show()
 
     def dt_algo(self):
+        """
+        Decision Tree Algorithm
+        """
         clf = DecisionTreeClassifier(random_state=0, max_depth=5)
         # clf = DecisionTreeClassifier(random_state=0)
 
