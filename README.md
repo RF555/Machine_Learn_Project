@@ -92,6 +92,8 @@ The 2 algoritms that wored best were the Decision Tree and SVM (dropping the dur
 | 9                    | 0.46666  |                | X        |       |            |        | X             |                |                    |            |           |         |               |
 | 8                    | 0.46666  |                | X        |       |            |        | X             |                |                    |            |           |         | X             |
 
+In conclusion, we can see that by dropping the parameter `duration_ms`, the accuracy of all algorithms is improved.
+
 ### 4. Can we make a comparison of algorithms by there accuracy?
 
 Our comparison will be of the best result of each algorithm:
@@ -103,9 +105,7 @@ Our comparison will be of the best result of each algorithm:
 | K Nearest Neighbors | 0.5           | `key`, `tempo` and `duration_ms`                |
 | Adaboost            | 0.46666       | `energy`, `speechiness` and `duration_ms`       |
 
-### 5. Can we add more parameters so that we'll get better results?
-
-### 6.
+### 5.
 
 ## Authors
 
