@@ -70,7 +70,7 @@ The 2 algoritms that wored best were the Decision Tree and SVM (dropping the dur
 | 8                                  | 0.64444  |                |          | X     | X          |        |               |                |                    | X          |           | X       |               |
 | 7                                  | 0.65555  |                |          | X     | X          |        |               |                |                    | X          |           | X       | X             |
 
-#### K Nearest Neighbors
+##### K Nearest Neighbors
 
 | Number of Properties               | Accuracy | `danceability` | `energy` | `key` | `loudness` | `mode` | `speechiness` | `acousticness` | `instrumentalness` | `liveness` | `valence` | `tempo` | `duration_ms` |
 |------------------------------------|----------|----------------|----------|-------|------------|--------|---------------|----------------|--------------------|------------|-----------|---------|---------------|
