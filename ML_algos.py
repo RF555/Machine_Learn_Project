@@ -16,8 +16,8 @@ knn_model = KNeighborsRegressor(n_neighbors=3)
 class ML_algos:
     def __init__(self, ls):
         songs_csv = pd.read_csv(ls)
-        x = songs_csv.iloc[:, 0:9]
-        y = songs_csv.iloc[:, 9]
+        x = songs_csv.iloc[:, 0:10]
+        y = songs_csv.iloc[:, 10]
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
             x, y, test_size=0.3, random_state=0)
 
@@ -42,15 +42,6 @@ class ML_algos:
 
             for keys, values in scores.items():
                 print(keys, ':', values)
-
-        ax = sns.stripplot(training)
-        ax.set(xlabel='values of k', ylabel='Training Score')
-
-        plt.show()
-
-        ax = sns.stripplot(test)
-        ax.set(xlabel='values of k', ylabel='Test Score')
-        plt.show()
 
         plt.scatter(K, training, color='k')
         plt.scatter(K, test, color='g')
